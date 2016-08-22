@@ -44,7 +44,7 @@ RSpec.describe Song, type: :model do
   describe 'note_contents=' do
     it 'sets notes for a song' do
       song = Song.new
-      notes = ['Great song', 'much bass', 'wow']
+      notes = ['Great song', 'much bass', 'wowe']
       song.note_contents = notes
       expect(song.notes.map(&:content)).to eq notes
     end
@@ -56,8 +56,8 @@ RSpec.describe Song, type: :model do
       notes << 'much bass'
       song.note_contents = ['much bass']
       expect(song.notes.map(&:content)).to eq notes
-      notes << 'wow'
-      song.note_contents = ['wow']
+      notes << 'wowe'
+      song.note_contents = ['wowe']
       expect(song.notes.map(&:content)).to eq notes
     end
     it 'ignores blank notes' do
